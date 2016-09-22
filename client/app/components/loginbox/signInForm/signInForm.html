@@ -1,0 +1,26 @@
+<form>
+  <div class="form-group">
+    <div class="input-group medium-spacing">
+      <div class="input-group-addon"><i class="ss-icon ss-mail"></i></div>
+      <input type="text" class="input form-control" id="txtUserName" placeholder="Your email" name="txtUserName">
+    </div>
+    <div class="input-group medium-spacing">
+      <div class="input-group-addon"><i class="ss-icon ss-lock"></i></div>
+      <input type="password" class="input form-control" id="txtPassword" placeholder="Password" name="txtPassword">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block small-spacing" ng-click="vm.submitLogin()">Sign in</button>
+    <div class="row no-padding no-margin">
+      <div class="col-md-7 col-sm-7 col-xs-12 small-spacing no-padding">
+        <a ui-sref="login.forgetPassword">
+          <span class="text-warning frgt-txt">Forgot your password?</span>
+        </a>
+      </div>
+
+      <div class="col-md-5 col-sm-5 col-xs-12 small-spacing no-padding">
+        <input type='checkbox' class='coregroup-checkbox' id='chkRememberMe' value='' name='chkRememberMe' />
+        <label for="chkRememberMe" class="css-label"></label>
+        <span class="pm-txt rm-spc">Remember me</span>
+      </div>
+    </div>
+  </div>
+</form>

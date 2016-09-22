@@ -1,0 +1,105 @@
+<div ng-hide="vm.signUpPage1">
+  <div class="row">
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.signUpPage1 = 'host';">I would like to host</button>
+  </div>
+  <br>
+  <div class="row">
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.signUpPage1 = 'stay';">I need a place to stay</button>
+  </div>
+</div>
+<div ng-show="vm.signUpPage1 != undefined && vm.signUpPage2 == undefined">
+  <h3 class="hdng-3 text-center">You are {{vm.signUpPage1}}ing! Great!</h3>
+  <br>
+  <div class="row">
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="vm.signUpPage2 = 'facebook';">Facebook</button>
+  </div>
+  <br>
+  <div class="row">
+    <button type="button" class="btn btn-default  btn-lg btn-block" ng-click="vm.signUpPage2 = 'account';">Create an Account</button>
+  </div>
+</div>
+<div ng-show="vm.signUpPage2 == 'facebook'">
+  <h3 class="hdng-3 text-center">Facebook!</h3>
+  <br>
+  <div class="row">
+    <h5 class="text-center">Select Location:</h5>
+  </div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 form-group">
+      <select class="form-control">
+        <option>San Antonio</option>
+        <option>Austin</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <h5 class="text-center">Select Ministry:</h5>
+  </div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 form-group">
+      <select class="form-control">
+        <option>Campus / College</option>
+        <option>Singles</option>
+        <option>Married</option>
+        <option>Family</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div ng-show="vm.signUpPage2 == 'account'">
+  <h3 class="hdng-3 text-center">Creating an Account</h3>
+  <br>
+  <div class="row">
+    <h5 class="text-center">Select Location:</h5>
+  </div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 form-group">
+      <select class="form-control">
+        <option>San Antonio</option>
+        <option>Austin</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <h5 class="text-center">Select Ministry:</h5>
+  </div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 form-group">
+      <select class="form-control">
+        <option>Campus / College</option>
+        <option>Singles</option>
+        <option>Married</option>
+        <option>Family</option>
+      </select>
+    </div>
+  </div>
+  <form>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 form-group">
+        <input type="text" class="form-control" placeholder="Email"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 form-group">
+        <input type="password" class="form-control" placeholder="Password"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 form-group">
+        <input type="password" class="form-control" placeholder="Password Confirm"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-1 col-xs-10 form-group">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Create</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<br>
+<div class="row" ng-show="vm.signUpPage1 != undefined" ng-click="vm.signUpPage1 = undefined; vm.signUpPage2 = undefined;">
+  <div class="col-xs-3" style="margin-left:36.6666667%">
+    <button type="button" class="btn btn-default">Back</button>
+  </div>
+</div>
